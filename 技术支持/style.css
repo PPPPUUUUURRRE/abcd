@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    width: 1920px;
+    background-image: url(../image/背景4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body{
+    width: 1920px;
+}
+
+.dianji {
+    height: 450px;
+    position: absolute;
+    top: 0px;
+    left: 600px;
+    width: 800px;
+}
+.dainji div{
+    margin: auto auto;
+}
+
+

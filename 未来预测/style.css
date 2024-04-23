@@ -1,0 +1,10 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    width: 1920px;
+    background-image: url(../image/背景3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

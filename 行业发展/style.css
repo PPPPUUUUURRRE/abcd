@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    width: 1920px;
+    background-image: url(../image/背景1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+div.title{
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    height: 60px;
+    width: 1920px;
+    position: relative;
+    font-family: "CustomFont", Arial, sans-serif;
+}
+body{
+    width: 1920px;
+    
+}
+
+div.daohang{
+    position: absolute;
+    top: 5px;
+    right: 200px;
+    width: 400px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+    font-weight: bold;
+}
+div.daohang a{
+    text-decoration: none;
+}
+
+div.daohang a div:link {color: palegreen;}
+div.daohang a div:visited {color: navy;}
+div.daohang a div:hover {color:black;border:2px #0d9de0 dashed}
+div.daohang a div:actived {color: red;}
+
+.maxbox{
+    position: relative;
+}
+#main1{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#main3{
+    position: absolute;
+    top: 80px;
+    right: 0px;
+}
+#main2{
+    position: absolute;
+    top: 550px;
+    right: 0px;
+}
+#main{
+    position: relative;
+    right: 200px;
+}
+.a{
+    height: 500px;
+    width:  500px;
+    border: 2px solid;
+}
+div.title2{
+    font-size: 15px;
+    position: absolute;
+    top: 500px;
+    right: 140px;
+
+}
+div.title1{
+    font-size: 15px;
+    position: absolute;
+    top: 60px;
+    right: 200px;
+}

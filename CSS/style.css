@@ -1,0 +1,29 @@
+div.daohang{
+    height: 50px;
+    display: flex;
+    font-size: 25px;
+    justify-content: flex-end;
+    font-weight: bold;
+}
+div.daohang a{
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+div.daohang a div:link {color: palegreen;}
+div.daohang a div:visited {color: navy;}
+div.daohang a div:hover {color:black;border:2px #0d9de0 dashed}
+div.daohang a div:actived {color: red;}
+@font-face {
+    font-family: "CustomFont";
+    src: url("../SanJiBangKaiJianTi-2.ttf") format("truetype");
+}
+div.title{
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    height: 60px;
+    width: 1920px;
+    position: relative;
+    font-family: "CustomFont", Arial, sans-serif;
+}

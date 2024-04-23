@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../JS/echarts.min.js"></script>
+    <script type="text/javascript" src="../JS/china.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <style>
+        #main2 {
+            position: absolute;
+            top: 450px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">未来发展及预测分析
+    </div>
+    <div style="display: block;height: 2px;width: 1920px;background-color: black;"></div>
+    <div class="daohang">
+        <a href="../技术支持/index.html">
+            <div class="jishu">技术</div>
+        </a>
+        <a href="../Welcome/index.html">
+            <div class="return">首页</div>
+        </a>
+    </div>
+    <div class="box" style="position: relative;">
+        <div id="main1" style="width: 880px; height: 450px;"></div>
+        <script>
+
+
+            var chartDom1 = document.getElementById('main1');
+            var myChart1 = echarts.init(chartDom1);
+            var option1;
+
+            var candlestickData = [
+                { data: [80, 0, 50, 50], text: '' },
+                { data: [70, 50, 50, 50], text: '碳酸锂价格回归理性（阴极）<br/>通过增加镍（阴极）和硅混合物(阳极)来提高比容量</br>钴含量降低（阴极）' },
+                { data: [50, 40, 40, 40, 40], text: '优化采购价格，例如增加外壳和隔膜的供应商数量' },
+                { data: [40, 32, 32, 32], text: '减少隔膜的集电器的厚度<br\>增加涂层厚度' },
+                { data: [35, 30, 35, 35], text: '溶剂（如甲基吡咯烷酮（NMP）的清除和回收工艺）<br\>干燥清除工艺' },
+                { data: [30, 27, 30, 30, 30], text: '连续的质量控制<br\>大数据分析' },
+                { data: [30, 0, 0, 0, 0], text: '' }
+            ];
+
+            option1 = {
+                title: { text: '电池价格优化趋势预测[2022-2030E]' },
+                grid: {
+                    top: 80, // 控制图表位置，调整这个值可以进一步调整标题位置
+                },
+                xAxis: {
+                    data: [
+                        '2022年价格',
+                        '活性材料',
+                        '无源材料',
+                        '电池设计',
+                        '干法加工',
+                        '工艺优化',
+                        '2030目标'
+                    ],
+                    axisLabel: {
+                        interval: 0, // 强制显示所有标签
+                    },
+                    show: true
+                },
+                yAxis: {
+                    show: false
+                },
+                tooltip: {
+                    formatter: function (params) {
+                        var dataIndex = params.dataIndex; // 获取当前蜡烛图的索引
+                        var data = candlestickData[dataIndex].data; // 获取当前蜡烛图的数据
+                        var text = candlestickData[dataIndex].text; // 获取当前蜡烛图的文本内容
+                        return text
+                    }
+                },
+                series: [
+
+                    {
+                        type: 'candlestick',
+                        data: candlestickData.map(function (item) {
+                            return item.data;
+                        }),
+                        itemStyle: {
+                            color0: '', // 设置颜色为灰色
+                            borderColor0: ''
+                        },
+                        markPoint: {
+                            data: [
+                                { coord: [0, 80], value: "1,200(元/千瓦时)" },
+                                { coord: [1, 70], value: "110-130" },
+                                { coord: [2, 50], value: "27-135" },
+                                { coord: [3, 40], value: "20-26" },
+                                { coord: [4, 35], value: "20-26" },
+                                { coord: [5, 30], value: "11-19" },
+                                { coord: [6, 30], value: "998" }
+                            ]
+                        }
+                    }
+                ]
+            };
+
+            option1 && myChart1.setOption(option1);
+
+
+        </script>
+        <img src="../image/ESG.png" alt=""
+            style="width: 850px;height: 350px;position: absolute;top: 50px;right: 100px;">
+        <div id="main" style="width: 950px; height: 500px;position: absolute;top: 450px;right: 0px;"></div>
+        <script>
+
+
+            var chartDom = document.getElementById('main');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                title: {
+                    text: '贸易全球化指数预测'
+                },
+                grid: {
+                    left: 0,
+                },
+                xAxis: {
+                    type: 'category',
+                    data: [
+                        2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, '2025E', '2030E', '2035E'
+                    ]
+                },
+                yAxis: {
+                    type: 'value',
+                    min: 15, // 设置 y 轴最小值为 15
+                    axisLabel: { // 设置 y 轴标签位置为上方
+                        show: true,
+                        position: 'top'
+                    }
+                },
+                series: [
+                    {
+                        data: [
+                            23.1, 25.0, 24.6, 24.5, 23.9, 22.1, 21.1, 21.9, 22.7, 21.8, 20.8, 23.2, 25.1, 25.9, 26.3, 27.2
+                        ],
+                        type: 'line',
+                        smooth: true,
+                        lineStyle: { // 设置线条样式
+                            color: 'red' // 设置线条颜色为黑色
+                        },
+                        label: { // 在每个点上显示数值
+                            show: true,
+                            position: 'top', // 设置标签位置为上方
+                            formatter: '{c}%' // 设置数值格式，{c} 表示当前数据值
+                        }
+                    }
+                ]
+            };
+
+            option && myChart.setOption(option);
+
+        </script>
+        <div id="main2" class="chart-container" style="width:900px; height:500px; "></div>
+        <script>
+            var chart_daaf8ddced1b4a3f8cbb0d59eba6b030 = echarts.init(
+                document.getElementById('main2'), 'white', { renderer: 'canvas' });
+            var option_daaf8ddced1b4a3f8cbb0d59eba6b030 = {
+                "animation": true,
+                "animationThreshold": 2000,
+                "animationDuration": 1000,
+                "animationEasing": "cubicOut",
+                "animationDelay": 0,
+                "animationDurationUpdate": 300,
+                "animationEasingUpdate": "cubicOut",
+                "animationDelayUpdate": 0,
+                "aria": {
+                    "enabled": false
+                },
+                "color": [
+                    "#5470c6",
+                    "#91cc75",
+                    "#fac858",
+                    "#ee6666",
+                    "#73c0de",
+                    "#3ba272",
+                    "#fc8452",
+                    "#9a60b4",
+                    "#ea7ccc"
+                ],
+                "series": [
+                    {
+                        "type": "bar",
+                        "name": "2020",
+                        "legendHoverLink": true,
+                        "data": [
+                            4.4,
+                            1.5,
+                            2.6,
+                            0.1
+                        ],
+                        "realtimeSort": false,
+                        "showBackground": false,
+                        "stack": "stack1",
+                        "stackStrategy": "samesign",
+                        "cursor": "pointer",
+                        "barMinHeight": 0,
+                        "barCategoryGap": "20%",
+                        "barGap": "30%",
+                        "large": false,
+                        "largeThreshold": 400,
+                        "seriesLayoutBy": "column",
+                        "datasetIndex": 0,
+                        "clip": true,
+                        "zlevel": 0,
+                        "z": 2,
+                        "label": {
+                            "show": true,
+                            "margin": 8,
+                            "formatter": "{c}"
+                        },
+                        "itemStyle": {
+                            "color": "#black"
+                        },
+                        "rippleEffect": {
+                            "show": true,
+                            "brushType": "stroke",
+                            "scale": 2.5,
+                            "period": 4
+                        }
+                    },
+                    {
+                        "type": "bar",
+                        "name": "2025E",
+                        "legendHoverLink": true,
+                        "data": [
+                            4.2,
+                            1.3,
+                            2.5,
+                            0.1
+                        ],
+                        "realtimeSort": false,
+                        "showBackground": false,
+                        "stack": "stack1",
+                        "stackStrategy": "samesign",
+                        "cursor": "pointer",
+                        "barMinHeight": 0,
+                        "barCategoryGap": "20%",
+                        "barGap": "30%",
+                        "large": false,
+                        "largeThreshold": 400,
+                        "seriesLayoutBy": "column",
+                        "datasetIndex": 0,
+                        "clip": true,
+                        "zlevel": 0,
+                        "z": 2,
+                        "label": {
+                            "show": true,
+                            "margin": 8,
+                            "formatter": "{c}"
+                        },
+                        "itemStyle": {
+                            "color": "red"
+                        },
+                        "rippleEffect": {
+                            "show": true,
+                            "brushType": "stroke",
+                            "scale": 2.5,
+                            "period": 4
+                        }
+                    },
+                    {
+                        "type": "bar",
+                        "name": "2030E",
+                        "legendHoverLink": true,
+                        "data": [
+                            3.4,
+                            0.5,
+                            2.4,
+                            0.1
+                        ],
+                        "realtimeSort": false,
+                        "showBackground": false,
+                        "stack": "stack1",
+                        "stackStrategy": "samesign",
+                        "cursor": "pointer",
+                        "barMinHeight": 0,
+                        "barCategoryGap": "20%",
+                        "barGap": "30%",
+                        "large": false,
+                        "largeThreshold": 400,
+                        "seriesLayoutBy": "column",
+                        "datasetIndex": 0,
+                        "clip": true,
+                        "zlevel": 0,
+                        "z": 2,
+                        "label": {
+                            "show": true,
+                            "margin": 8,
+                            "formatter": "{c}"
+                        },
+                        "itemStyle": {
+                            "color": "#D3D3D3"
+                        },
+                        "rippleEffect": {
+                            "show": true,
+                            "brushType": "stroke",
+                            "scale": 2.5,
+                            "period": 4
+                        }
+                    }
+                ],
+                "legend": [
+                    {
+                        "data": [
+                            "2020",
+                            "2025E",
+                            "2030E"
+                        ],
+                        "selected": {},
+                        "show": true,
+                        "top": "bottom",
+                        "padding": 5,
+                        "itemGap": 10,
+                        "itemWidth": 25,
+                        "itemHeight": 14,
+                        "backgroundColor": "transparent",
+                        "borderColor": "#ccc",
+                        "borderWidth": 1,
+                        "borderRadius": 0,
+                        "pageButtonItemGap": 5,
+                        "pageButtonPosition": "end",
+                        "pageFormatter": "{current}/{total}",
+                        "pageIconColor": "#2f4554",
+                        "pageIconInactiveColor": "#aaa",
+                        "pageIconSize": 15,
+                        "animationDurationUpdate": 800,
+                        "selector": false,
+                        "selectorPosition": "auto",
+                        "selectorItemGap": 7,
+                        "selectorButtonGap": 10
+                    }
+                ],
+                "tooltip": {
+                    "show": true,
+                    "trigger": "item",
+                    "triggerOn": "mousemove|click",
+                    "axisPointer": {
+                        "type": "line"
+                    },
+                    "showContent": true,
+                    "alwaysShowContent": false,
+                    "showDelay": 0,
+                    "hideDelay": 100,
+                    "enterable": false,
+                    "confine": false,
+                    "appendToBody": false,
+                    "transitionDuration": 0.4,
+                    "textStyle": {
+                        "fontSize": 14
+                    },
+                    "borderWidth": 0,
+                    "padding": 5,
+                    "order": "seriesAsc"
+                },
+                "xAxis": [
+                    {
+                        "show": true,
+                        "scale": false,
+                        "nameLocation": "end",
+                        "nameGap": 15,
+                        "gridIndex": 0,
+                        "axisLabel": {
+                            "show": true,
+                            "rotate": 0,
+                            "margin": 8
+                        },
+                        "inverse": false,
+                        "offset": 0,
+                        "splitNumber": 5,
+                        "minInterval": 0,
+                        "splitLine": {
+                            "show": true,
+                            "lineStyle": {
+                                "show": true,
+                                "width": 1,
+                                "opacity": 1,
+                                "curveness": 0,
+                                "type": "solid"
+                            }
+                        },
+                        "data": [
+                            "\u91d1\u878d\u670d\u52a1\u6210\u672c",
+                            "\u7ef4\u62a4\u6210\u672c",
+                            "\u6298\u65e7\u6210\u672c",
+                            "\u80fd\u6e90\u6210\u672c"
+                        ]
+                    }
+                ],
+                "yAxis": [
+                    {
+                        "show": true,
+                        "scale": false,
+                        "nameLocation": "end",
+                        "nameGap": 15,
+                        "gridIndex": 0,
+                        "inverse": false,
+                        "offset": 0,
+                        "splitNumber": 5,
+                        "minInterval": 0,
+                        "splitLine": {
+                            "show": true,
+                            "lineStyle": {
+                                "show": true,
+                                "width": 1,
+                                "opacity": 1,
+                                "curveness": 0,
+                                "type": "solid"
+                            }
+                        }
+                    }
+                ],
+                "title": [
+                    {
+                        "show": true,
+                        "text": "2035\u5e74\u65b0\u80fd\u6e90\u8f66\u62e5\u6709\u6210\u672c（单位：万）",
+                        "target": "blank",
+                        "subtarget": "blank",
+                        "padding": 5,
+                        "itemGap": 10,
+                        "textAlign": "auto",
+                        "textVerticalAlign": "auto",
+                        "triggerEvent": false
+                    }
+                ]
+            };
+            chart_daaf8ddced1b4a3f8cbb0d59eba6b030.setOption(option_daaf8ddced1b4a3f8cbb0d59eba6b030);
+        </script>
+        <div class="text"
+            style="position: absolute;top: 0px;right: 750px; font-size: 18px; font-family: sans-serif;font-weight: bolder;color: #464646;">
+            全球ESG承诺及目标规划</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用户</title>
+  <script type="text/javascript" src="../JS/echarts.min.js"></script>
+  <script type="text/javascript" src="../JS/china.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+  <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts-wordcloud.min.js"></script>
+</head>
+
+<body>
+  <div class="title">新能源汽车优势结构、销量及相关政策</div>
+  <div class="daohang">
+    <a href="../行业发展/index.html">
+      <div class="fazhan">发展</div>
+    </a>
+    <a href="./index1.html">
+      <div class="xiaoliang">销量</div>
+    </a>
+    <a href="../技术支持/index.html">
+      <div class="jishu">技术</div>
+    </a>
+    <a href="../Welcome/index.html">
+      <div class="return">首页</div>
+    </a>
+  </div>
+  <div class="mainbox">
+
+    <div id="main" style="width: 800px; height: 800px;position: relative;top: 40px;"></div>
+    <script>
+
+      var chartDom = document.getElementById('main');
+      var myChart = echarts.init(chartDom);
+      var option;
+
+      var data = [
+        {
+          name: '新能源汽车优点',
+          children: [
+            {
+              name: '电池优点',
+              value: 15,
+              children: [
+                {
+                  name: '高能量密度',
+                  value: 3
+                },
+                {
+                  name: '长寿命',
+                  value: 3
+                },
+                {
+                  name: '快速充电',
+                  value: 3
+                },
+                {
+                  name: '环保',
+                  value: 3
+                }
+              ]
+            },
+            {
+              name: '续航优点',
+              value: 15,
+              children: [
+                {
+                  name: '里程焦虑减少',
+                  value: 3
+                },
+                {
+                  name: '节能减排',
+                  value: 3
+                },
+                {
+                  name: '智能技术',
+                  value: 3
+                },
+                {
+                  name: '热管理系统',
+                  value: 3
+                }
+              ]
+            },
+            {
+              name: '运行成本优势',
+              value: 10,
+              children: [
+                {
+                  name: '低维护成本',
+                  value: 3
+                },
+                {
+                  name: '低能源成本',
+                  value: 3
+                },
+                {
+                  name: '长期节约费用',
+                  value: 3
+                }
+              ]
+            },
+            {
+              name: '驾驶体验改善',
+              value: 15,
+              children: [
+                {
+                  name: '静音驾驶',
+                  value: 3
+                },
+                {
+                  name: '高性能驾驶',
+                  value: 3
+                },
+                {
+                  name: '平稳行驶',
+                  value: 3
+                }
+              ]
+            },
+            {
+              name: '环保优势',
+              value: 15,
+              children: [
+                {
+                  name: '减少尾气排放',
+                  value: 3
+                },
+                {
+                  name: '改善空气质量',
+                  value: 3
+                },
+                {
+                  name: '促进可持续发展',
+                  value: 3
+                }
+              ]
+            },
+            {
+              name: '技术创新',
+              value: 15,
+              children: [
+                {
+                  name: '自动驾驶技术',
+                  value: 3
+                },
+                {
+                  name: '车联网技术',
+                  value: 3
+                },
+                {
+                  name: '智能车载技术',
+                  value: 3
+                }
+              ]
+            },
+            {
+              name: '安全性增强',
+              value: 15,
+              children: [
+                {
+                  name: '低重心高平衡性',
+                  value: 3
+                },
+                {
+                  name: '自动制动',
+                  value: 3
+                },
+                {
+                  name: '碰撞预警',
+                  value: 3
+                }
+              ]
+            },
+            {
+              name: '可再生能源整合',
+              value: 10,
+              children: [
+                {
+                  name: '结合太阳能和风能',
+                  value: 3
+                },
+                {
+                  name: '降低能源消耗',
+                  value: 3
+                }
+              ]
+            },
+            {
+              name: '改善交通拥堵',
+              value: 10,
+              children: [
+                {
+                  name: '高加速性',
+                  value: 3
+                },
+                {
+                  name: '提高交通效率',
+                  value: 3
+                }
+              ]
+            },
+            {
+              name: '政策和补贴支持',
+              value: 10,
+              children: [
+                {
+                  name: '免税、购车补贴',
+                  value: 3
+                },
+                {
+                  name: '降低购买成本',
+                  value: 3
+                }
+              ]
+            },
+            {
+              name: '社会形象提升',
+              value: 10,
+              children: [
+                {
+                  name: '环保关注',
+                  value: 2
+                }
+              ]
+            }
+          ]
+        }
+      ];
+
+      option = {
+        title: {
+      text: '新能源汽车优点', // Title text
+      left: 'center',
+      top:'top'// Title position
+    },
+        series: {
+          type: 'sunburst',
+          // emphasis: {
+          //     focus: 'ancestor'
+          // },
+          data: data,
+          radius: [0, '90%'],
+          label: {
+            rotate: 'radial'
+          },
+          color: [
+            '#5470C6',
+            '#91CC75',
+            '#FAC858',
+            '#EE6666',
+            '#73C0DE',
+            '#3BA272',
+            '#FC8452',
+            '#9A60B4',
+            '#F99D9C',
+            '#B6A2DE',
+            '#FFD700'
+          ]
+        }
+      };
+
+      option && myChart.setOption(option);
+
+
+    </script>
+      <table>
+        <tr>
+          <th style="font-size: 20px;">相关政策</th>
+        </tr>
+        <tr>
+          <td><a href="https://www.gov.cn/zhengce/zhengceku/202306/content_6887734.htm"><div>关于延续和优化新能源汽车车辆购置税减免政策的公告</div></a></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.gov.cn/zhengce/202306/content_6887717.htm"><div>新能源汽车车辆购置税减免政策延长至2027年年底</div></a></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.gov.cn/zhengce/zhengceku/2021-12/31/content_5665857.htm"><div>关于2022年新能源汽车推广应用财政补贴政策的通知</div></a></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.gov.cn/xinwen/2022-08/11/content_5705000.htm"><div>安徽省出台政策促新能源汽车产业提质扩量增效</div></a></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.gz.gov.cn/zwfw/zxfw/jtfw/content/post_8900861.html"><div>广州新能源汽车补贴新规出台</div></a></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.suzhou.gov.cn/szsrmzf/mszx/202311/3e3e9db4ef424323b6f414649a78e2e6.shtml"><div>新能源汽车亿元补贴政策正式上线</div></a></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.zj.gov.cn/art/2021/4/22/art_1229203592_2270218.html"><div>《浙江省新能源汽车产业发展“十四五”规划》的通知</div></a></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.shanghai.gov.cn/nw17239/20231226/5ded07c264f54e64895c80b052ad25e0.html"><div>上海市鼓励购买和使用新能源汽车实施办法</div></a></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.beijing.gov.cn/zhengce/zcjd/202303/t20230322_2941646.html"><div>北京市关于鼓励汽车更新换代消费的方案</div></a></td>
+        </tr>
+      </table>
+    </div>
+   <a href="./index3.html"><div class="button">舆情云图</div></a>
+  </div>
+
+
+
+
+</body>
+
+</html>

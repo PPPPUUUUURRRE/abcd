@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../JS/echarts.min.js"></script>
+    <script type="text/javascript" src="../JS/china.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>
+
+<body>
+    <div class="title">新能源汽车技术创新总览</div>
+    <div style="display: block;height: 2px;width: 1920px;background-color: black;"></div>
+    <div class="daohang">
+        <a href="../用户消费/index.html">
+            <div class="xiaoliang">消费</div>
+        </a>
+        <a href="../未来预测/index.html">
+            <div class="前景">前景</div>
+        </a>
+        <a href="../Welcome/index.html">
+            <div class="return">首页</div>
+        </a>
+    </div>
+    <div class="mainbox" style="position: relative;width: 1920px; position: relative;">
+        <div style="position: absolute;top: 0px;left: 5px;font-size: 18px; font-family: sans-serif;font-weight: bolder; color: #464646;">电池品牌占有率</div>
+
+        <!-- 电机 -->
+        <div id="main" style="width: 600px; height: 450px;position: absolute;top: 500px;"></div>
+        <script>
+
+            var chartDom = document.getElementById('main');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                title: {
+                    text: '新能源汽车电机对比'
+                },
+                legend: {
+                    data: ['永磁同步电机', '感应电机']
+                },
+                radar: {
+                    // shape: 'circle',
+                    indicator: [
+                        { name: '转速峰值（r/min）', max: 15000 },
+                        { name: '过载能力（最大%）', max: 600 },
+                        { name: '峰值效率（%）', max: 100 },
+                        { name: '重量在11KW下（kg）', max: 300 },
+                        { name: '动力性能（kw）', max: 300 }
+                    ]
+                },
+                series: [
+                    {
+                        name: 'Budget vs spending',
+                        type: 'radar',
+                        data: [
+                            {
+                                value: [10000, 300, 97, 92, 200],
+                                name: '永磁同步电机'
+                            },
+                            {
+                                value: [15000, 500, 92, 220, 300],
+                                name: '感应电机'
+                            }
+                        ]
+                    }
+                ]
+            };
+            option && myChart.setOption(option);
+        </script>
+
+        <!-- 电池品牌 -->
+        <div id="89e29033663545c987bb918a252fdc42" class="chart-container"
+            style="width:600px; height:450px;position:absolute;top: 0px;left: 0px; "></div>
+        <script>
+            var chart_89e29033663545c987bb918a252fdc42 = echarts.init(
+                document.getElementById('89e29033663545c987bb918a252fdc42'), 'white', { renderer: 'canvas' });
+            var option_89e29033663545c987bb918a252fdc42 = {
+                "animation": true,
+                "animationThreshold": 2000,
+                "animationDuration": 1000,
+                "animationEasing": "cubicOut",
+                "animationDelay": 0,
+                "animationDurationUpdate": 300,
+                "animationEasingUpdate": "cubicOut",
+                "animationDelayUpdate": 0,
+                "aria": {
+                    "enabled": false
+                },
+                "color": [
+                    "#5470c6",
+                    "#91cc75",
+                    "#fac858",
+                    "#ee6666",
+                    "#73c0de",
+                    "#3ba272",
+                    "#fc8452",
+                    "#9a60b4",
+                    "#ea7ccc"
+                ],
+                "series": [
+                    {
+                        "type": "treemap",
+                        "name": "\u7535\u6c60\u54c1\u724c\u5360\u6709\u7387\u77e9\u5f62\u6811\u56fe",
+                        "data": [
+                            {
+                                "name": "\u5b81\u5fb7\u65f6\u4ee3",
+                                "value": 36.8
+                            },
+                            
+                            {
+                                "name": "LG\u65b0\u80fd\u6e90",
+                                "value": 14.5
+                            },
+                            {
+                                "name": "\u6bd4\u4e9a\u8fea",
+                                "value": 15.8
+                            },
+                            {
+                                "name": "\u677e\u4e0b",
+                                "value": 7.5
+                            },
+                            {
+                                "name": "\u4e2d\u521b\u65b0\u822a",
+                                "value": 6.8
+                            },
+                            {
+                                "name": "\u4e09\u661f",
+                                "value": 5.3
+                            },
+                            {
+                                "name": "SK On",
+                                "value": 5.2
+                            },
+                            {
+                                "name": "\u56fd\u8f69\u9ad8\u79d1",
+                                "value": 3.6
+                            },
+                            {
+                                "name": "\u4ebf\u7eac\u9502\u80fd",
+                                "value": 3.6
+                            },
+                            {
+                                "name": "\u5b5a\u80fd\u79d1\u6280",
+                                "value": 2.6
+                            },
+                            {
+                                "name": "\u5176\u5b83",
+                                "value": 1.7
+                            }
+                        ],
+                        "width": "90%",
+                        "height": "90%",
+                        "label": {
+                            "show": true,
+                            "position": "inside",
+                            "margin": 8,
+                            "fontSize": 14,
+                            "formatter": "{b}:\n{c}%"
+                        },
+                        "upperLabel": {
+                            "show": true,
+                            "position": "inside",
+                            "margin": 8
+                        },
+                        "drillDownIcon": "\u25b6",
+                        "roam": "move",
+                        "nodeClick": "zoomToNode",
+                        "zoomToNodeRatio": 0.1024,
+                        "colorMappingBy": "index",
+                        "visibleMin": 10,
+                        "rippleEffect": {
+                            "show": true,
+                            "brushType": "stroke",
+                            "scale": 2.5,
+                            "period": 4
+                        },
+                        "background_color": "rgba(0,0,0,0)"
+                    }
+                ],
+                "legend": [
+                    {
+                        "data": [
+                            "\u7535\u6c60\u54c1\u724c\u5360\u6709\u7387\u77e9\u5f62\u6811\u56fe"
+                        ],
+                        "selected": {},
+                        "show": false,
+                        "padding": 5,
+                        "itemGap": 10,
+                        "itemWidth": 25,
+                        "itemHeight": 14,
+                        "backgroundColor": "transparent",
+                        "borderColor": "#ccc",
+                        "borderWidth": 1,
+                        "borderRadius": 0,
+                        "pageButtonItemGap": 5,
+                        "pageButtonPosition": "end",
+                        "pageFormatter": "{current}/{total}",
+                        "pageIconColor": "#2f4554",
+                        "pageIconInactiveColor": "#aaa",
+                        "pageIconSize": 15,
+                        "animationDurationUpdate": 800,
+                        "selector": false,
+                        "selectorPosition": "auto",
+                        "selectorItemGap": 7,
+                        "selectorButtonGap": 10
+                    }
+                ],
+                "tooltip": {
+                    "show": true,
+                    "trigger": "item",
+                    "triggerOn": "mousemove|click",
+                    "axisPointer": {
+                        "type": "line"
+                    },
+                    "showContent": true,
+                    "alwaysShowContent": false,
+                    "showDelay": 0,
+                    "hideDelay": 100,
+                    "enterable": false,
+                    "confine": false,
+                    "appendToBody": false,
+                    "transitionDuration": 0.4,
+                    "textStyle": {
+                        "fontSize": 14
+                    },
+                    "borderWidth": 0,
+                    "padding": 5,
+                    "order": "seriesAsc"
+                }
+
+            };
+            chart_89e29033663545c987bb918a252fdc42.setOption(option_89e29033663545c987bb918a252fdc42);
+        </script>
+
+        <!-- 点击介绍 -->
+        <div class="dianji">
+            <div class="text 555" style=" display: none;">
+                <div style="font-size: 20px;">三星新能源电池是由三星电子（Samsung
+                    Electronics）旗下的三星SDI（Samsung SDI）公司开发和生产的，主要应用于电动汽车、储能系统以及移动设备等领域。以下是关于三星新能源电池的一些介绍：
+                </div>
+                锂离子电池： 三星新能源电池主要采用锂离子电池技术，这是当前电动汽车和储能系统中主流的电池类型之一。锂离子电池具有高能量密度、长寿命和良好的充放电性能等优点。
+                动力电池和储能电池： 三星提供动力电池和储能电池两种类型的新能源电池。动力电池用于电动汽车和混合动力车辆等车载应用，而储能电池则用于家庭储能系统、商业储能系统和电网调频等应用。
+                高能量密度： 三星新能源电池具有高能量密度，可以在相对较小的体积和重量下提供更多的电能，从而提高了电动汽车的续航里程和储能系统的容量。
+                高品质和可靠性： 三星SDI注重产品质量和品质控制，采用先进的生产工艺和严格的质量管理体系，确保电池的品质稳定和可靠性高。公司还不断进行研发和创新，推出新的电池产品和技术，以提高电池的性能和安全性。
+                国际合作： 三星SDI与多家国际知名汽车制造商和能源公司建立了合作伙伴关系，为其提供电动汽车用的动力电池和储能电池。公司还与国际合作伙伴共同推动电动汽车和清洁能源的发展。
+                环保可持续： 三星SDI致力于绿色环保和可持续发展，其新能源电池产品符合环保标准，采用可再生材料和环保生产工艺，以减少对环境的影响。
+                总的来说，三星新能源电池是高品质、高性能的电池产品，在电动汽车和储能系统等领域具有重要的应用和市场地位，为推动清洁能源的发展做出了积极贡献。
+            </div>
+            <div class="text 666" style=" display: none;">
+                <div style="font-size: 20px;">SK Innovation（SK
+                    이노베이션）是韩国的一家知名化学工程公司，也是电池和储能解决方案领域的重要参与者之一。其电池部门主要涉足电动汽车和储能系统领域。以下是关于SK Innovation新能源电池的一些介绍：
+                </div>
+                锂离子电池： SK Innovation新能源电池主要采用锂离子电池技术，这是当前电动汽车和储能系统中主流的电池类型之一。锂离子电池具有高能量密度、长寿命和良好的充放电性能等优点。
+                动力电池和储能电池： SK Innovation提供动力电池和储能电池两种类型的新能源电池。动力电池用于电动汽车和混合动力车辆等车载应用，而储能电池则用于家庭储能系统、商业储能系统和电网调频等应用。
+                NMC电池技术： SK Innovation在电池技术方面投入了大量研发资源，特别是在NMC（镍锰钴）电池技术方面取得了一定的突破。NMC电池具有高能量密度、稳定性和安全性，适用于广泛的应用场景。
+                电池性能提升： SK
+                Innovation不断进行研发和创新，致力于提升电池的性能和安全性，并降低成本。公司采用先进的材料和工艺，改进电池结构和制造流程，以提高电池的能量密度、循环寿命和充放电速率等关键性能指标。
+                国际合作： SK Innovation与多家国际知名汽车制造商和能源公司建立了合作伙伴关系，为其提供电动汽车用的动力电池和储能电池。公司还与国际合作伙伴共同推动电动汽车和清洁能源的发展。
+                环保可持续： SK Innovation致力于绿色环保和可持续发展，其新能源电池产品符合环保标准，采用可再生材料和环保生产工艺，以减少对环境的影响。
+                总的来说，SK Innovation新能源电池是高品质、高性能的电池产品，在电动汽车和储能系统等领域具有重要的应用和市场地位，为推动清洁能源的发展做出了积极贡献。
+            </div>
+            <div class="text 777" style="display: none;">
+                <div style="font-size: 20px;">
+                    国轩新能源（CATL，宁德时代）是中国领先的新能源汽车动力电池制造商之一，也是全球最大的动力电池制造商之一。以下是关于国轩新能源电池的一些介绍：
+                </div>
+                锂离子电池： 国轩新能源电池主要采用锂离子电池技术，这是目前电动汽车和储能系统中主流的电池类型之一。锂离子电池具有高能量密度、长寿命和良好的充放电性能等优点。
+                动力电池和储能电池： 国轩新能源提供动力电池和储能电池两种类型的新能源电池。动力电池用于电动汽车和混合动力车辆等车载应用，而储能电池则用于家庭储能系统、商业储能系统和电网调频等应用。
+                NMC和LFP电池技术：
+                国轩新能源在电池技术方面拥有丰富的研发经验和技术实力，主要涉及NMC（镍锰钴）和LFP（磷酸铁锂）等电池技术。NMC电池具有高能量密度和较高的循环寿命，适用于需求高能量密度的应用场景；而LFP电池具有高安全性和稳定性，适用于对安全性要求较高的场景。
+                电池性能提升： 国轩新能源不断进行研发和创新，致力于提升电池的性能和安全性，并降低成本。公司采用先进的材料和工艺，改进电池结构和制造流程，以提高电池的能量密度、循环寿命和充放电速率等关键性能指标。
+                国际合作： 国轩新能源与多家国际知名汽车制造商和能源公司建立了合作伙伴关系，为其提供电动汽车用的动力电池和储能电池。公司还与国际合作伙伴共同推动电动汽车和清洁能源的发展。
+                环保可持续： 国轩新能源致力于绿色环保和可持续发展，其新能源电池产品符合环保标准，采用可再生材料和环保生产工艺，以减少对环境的影响。
+                总的来说，国轩新能源电池是高品质、高性能的电池产品，在电动汽车和储能系统等领域具有重要的应用和市场地位，为推动清洁能源的发展做出了积极贡献。
+            </div>
+            <div class="text 888" style=" display: none;">
+                <div style="font-size: 20px;">亿纬锂能（EVE Energy Co.,
+                    Ltd.）是中国领先的锂离子电池制造商之一，致力于为电动汽车、储能系统、消费电子等领域提供高性能的新能源电池产品。以下是关于亿纬锂能新能源电池的一些介绍：
+                </div>
+
+                锂离子电池： 亿纬锂能新能源电池主要采用锂离子电池技术，这是目前电动汽车和储能系统中主流的电池类型之一。锂离子电池具有高能量密度、长寿命和良好的充放电性能等优点。
+                动力电池和储能电池： 亿纬锂能提供动力电池和储能电池两种类型的新能源电池。动力电池用于电动汽车和混合动力车辆等车载应用，而储能电池则用于家庭储能系统、商业储能系统和电网调频等应用。
+                NMC和LFP电池技术：
+                亿纬锂能在电池技术方面投入了大量研发资源，主要涉及NMC（镍锰钴）和LFP（磷酸铁锂）等电池技术。NMC电池具有高能量密度和较高的循环寿命，适用于需求高能量密度的应用场景；而LFP电池具有高安全性和稳定性，适用于对安全性要求较高的场景。
+                电池性能提升： 亿纬锂能不断进行研发和创新，致力于提升电池的性能和安全性，并降低成本。公司采用先进的材料和工艺，改进电池结构和制造流程，以提高电池的能量密度、循环寿命和充放电速率等关键性能指标。
+                国际合作： 亿纬锂能与多家国际知名汽车制造商和能源公司建立了合作伙伴关系，为其提供电动汽车用的动力电池和储能电池。公司还与国际合作伙伴共同推动电动汽车和清洁能源的发展。
+                环保可持续： 亿纬锂能致力于绿色环保和可持续发展，其新能源电池产品符合环保标准，采用可再生材料和环保生产工艺，以减少对环境的影响。
+                总的来说，亿纬锂能新能源电池是高品质、高性能的电池产品，在电动汽车和储能系统等领域具有重要的应用和市场地位，为推动清洁能源的发展做出了积极贡献。
+            </div>
+            <div class="text 999" style=" display: none;">
+                <div style="font-size: 20px;">浮能科技（SVOLT Energy
+                    Technology）是中国的新能源电池制造商之一，专注于锂离子电池的研发、生产和销售。以下是关于浮能科技新能源电池的一些介绍：</div>
+
+                锂离子电池： 浮能科技新能源电池主要采用锂离子电池技术，这是目前电动汽车和储能系统中主流的电池类型之一。锂离子电池具有高能量密度、长寿命和良好的充放电性能等优点。
+                动力电池和储能电池： 浮能科技提供动力电池和储能电池两种类型的新能源电池。动力电池用于电动汽车和混合动力车辆等车载应用，而储能电池则用于家庭储能系统、商业储能系统和电网调频等应用。
+                NMC和LFP电池技术：
+                浮能科技在电池技术方面拥有丰富的研发经验和技术实力，主要涉及NMC（镍锰钴）和LFP（磷酸铁锂）等电池技术。NMC电池具有高能量密度和较高的循环寿命，适用于需求高能量密度的应用场景；而LFP电池具有高安全性和稳定性，适用于对安全性要求较高的场景。
+                创新技术：
+                浮能科技致力于电池技术的创新和突破，不断推出新的电池产品和技术，以提高电池的性能、安全性和可靠性。公司采用先进的材料和工艺，改进电池结构和制造流程，提高电池的能量密度、循环寿命和充放电速率等关键性能指标。
+                国际合作： 浮能科技与国内外多家知名汽车制造商和能源公司展开合作，共同推动电动汽车和清洁能源的发展。公司致力于构建全球化的供应链和服务体系，为客户提供优质的电池产品和解决方案。
+                环保可持续： 浮能科技致力于绿色环保和可持续发展，其新能源电池产品符合环保标准，采用可再生材料和环保生产工艺，以减少对环境的影响。
+            </div>
+            <div class="text 111" style=" display: none;">
+                <div style="font-size: 20px;">LG新能源电池是由LG化学（LG
+                    Chem）公司开发和生产的，是该公司在新能源领域的关键产品之一。以下是关于LG新能源电池的一些介绍：</div>
+
+                锂离子电池： LG新能源电池主要采用锂离子电池技术，这是目前电动汽车和储能系统中最常用的电池类型之一。锂离子电池以其高能量密度、长寿命和快速充电等优点而受到广泛关注。
+                多种型号： LG提供多种型号和规格的新能源电池，以满足不同应用场景的需求。其中包括用于电动汽车的动力电池和用于储能系统的储能电池等。
+                高能量密度： LG新能源电池具有高能量密度，可以在相对较小的体积和重量下提供更多的电能，从而提高了电动汽车的续航里程和储能系统的容量。
+                先进的技术： LG化学在电池技术领域拥有先进的研发能力和技术实力，不断推出新的电池材料和工艺，以提高电池的性能、安全性和可靠性。
+                应用广泛： LG新能源电池广泛应用于电动汽车、混合动力车辆、纯电动车辆、电动自行车、储能系统等领域，为清洁能源和可持续发展做出了重要贡献。
+                环保可持续： LG致力于绿色环保和可持续发展，其新能源电池产品符合环保标准，采用可再生材料和环保生产工艺，以减少对环境的影响。
+                总的来说，LG新能源电池是高品质、高性能的电池产品，在电动汽车和储能系统等领域具有重要的应用和市场地位，为推动清洁能源的发展做出了积极贡献。
+            </div>
+            <div class="text 222" style=" display: none;">
+                <div style="font-size: 20px;">比亚迪（BYD）是一家中国的汽车制造商，也是全球领先的新能源汽车和电池制造商之一。在电池方面，比亚迪主要涉及以下几个方面：</div>
+                
+                锂电池技术：比亚迪是一家拥有自主知识产权的锂电池制造商。他们的锂电池技术涵盖了多种类型的电池，包括锂铁磷酸电池（LFP）、三元材料电池等。比亚迪的锂电池技术在汽车、能源存储和其他领域得到广泛应用。
+                动力电池组装：比亚迪不仅提供单体的锂电池，还提供动力电池组装服务。他们将单体电池组装成电池模组，进而组装成完整的动力电池组，用于驱动纯电动车辆和混合动力车辆。
+                电池管理系统（BMS）：比亚迪开发了先进的电池管理系统，用于监控和管理动力电池的状态。这些系统可以确保电池的安全性、稳定性和长寿命，提高整车的性能和可靠性。
+                应用领域：除了汽车行业，比亚迪的电池技术还广泛应用于能源存储系统、电动公交车、电动卡车等领域。他们的电池产品和解决方案在全球范围内受到广泛关注和应用。
+            </div>
+            <div class="text 333" style=" display: none;">
+                <div style="font-size: 20px;">松下（Panasonic）是一家全球知名的电子产品制造商，其新能源电池在电动汽车和储能领域也有着重要的地位。以下是关于松下新能源电池的一些介绍：
+                </div>
+
+                锂离子电池： 松下新能源电池主要采用锂离子电池技术，这是目前电动汽车和储能系统中最常用的电池类型之一。锂离子电池以其高能量密度、长寿命和快速充电等优点而受到广泛关注。
+                动力电池和储能电池： 松下提供动力电池和储能电池两种类型的新能源电池。动力电池用于电动汽车和混合动力车辆等车载应用，而储能电池则用于家庭储能系统、商业储能系统和电网调频等应用。
+                高品质和可靠性： 松下作为全球领先的电池制造商之一，其新能源电池具有高品质和可靠性。通过严格的质量控制和测试，确保电池的性能稳定、安全可靠。
+                合作伙伴关系： 松下与特斯拉（Tesla）等知名汽车制造商建立了合作伙伴关系，为其提供电动汽车用的动力电池。此外，松下还与其他汽车厂商和能源公司展开合作，共同推动新能源电池技术的发展和应用。
+                创新技术： 松下在电池技术领域拥有丰富的研发经验和技术实力，不断推出创新的电池材料、工艺和系统，以提高电池的性能、安全性和可靠性。
+                环保可持续： 松下致力于绿色环保和可持续发展，其新能源电池产品符合环保标准，采用可再生材料和环保生产工艺，以减少对环境的影响。
+                总的来说，松下新能源电池是高品质、高性能的电池产品，在电动汽车和储能系统等领域具有重要的应用和市场地位，为推动清洁能源的发展做出了积极贡献。
+            </div>
+            <div class="text 444" style=" display: none;">
+                <div style="font-size: 20px;">中创新航（CATL，宁德时代）是中国领先的新能源汽车动力电池制造商之一，其新能源电池在全球范围内备受关注。以下是关于中创新航新能源电池的一些介绍：
+                </div>
+
+                锂离子电池： 中创新航新能源电池主要采用锂离子电池技术，这是当前电动汽车和储能系统中主流的电池类型之一。锂离子电池具有高能量密度、长寿命和良好的充放电性能等优点。
+                动力电池和储能电池： 中创新航生产的新能源电池包括动力电池和储能电池两种类型。动力电池用于电动汽车和混合动力车辆等车载应用，而储能电池则用于家庭储能系统、商业储能系统和电网调频等应用。
+                多种型号和规格： 中创新航提供多种型号和规格的新能源电池，以满足不同客户和应用场景的需求。公司不断进行研发和创新，推出新的电池产品和技术，以提高电池的性能、安全性和可靠性。
+                高品质和可靠性： 中创新航注重产品质量和品质控制，采用先进的生产工艺和严格的质量管理体系，确保电池的品质稳定和可靠性高。公司还致力于不断改进电池技术，提高产品性能和成本效益。
+                国际合作： 中创新航与多家国际知名汽车制造商和能源公司建立了合作伙伴关系，为其提供电动汽车用的动力电池和储能电池。公司还与国际合作伙伴共同推动电动汽车和清洁能源的发展。
+                环保可持续： 中创新航致力于绿色环保和可持续发展，其新能源电池产品符合环保标准，采用可再生材料和环保生产工艺，以减少对环境的影响。
+                总的来说，中创新航新能源电池是高品质、高性能的电池产品，在电动汽车和储能系统等领域具有重要的应用和市场地位，为推动清洁能源的发展做出了积极贡献。
+            </div>
+            <div class="text 000"> <video width="800px" height="400px" controls autoplay >
+                    <source src="../Video/宁德时代.mp4" type="video/mp4">
+                </video></div>
+            <div class="text 011" style=" display: none;">其他</div>
+        </div>
+
+        <!-- 电池种类 -->
+        <div id="da5420aa781649e89408e1415873c09b" class="chart-container"
+            style="width:500px; height:480px;position: absolute;top: 0px;right: 0px;"></div>
+            <script>
+                var chart_90632b87f72b4b6b8d8bdfe00349c346 = echarts.init(
+                    document.getElementById('da5420aa781649e89408e1415873c09b'), 'white', {renderer: 'canvas'});
+                var option_90632b87f72b4b6b8d8bdfe00349c346 = {
+            "animation": true,
+            "animationThreshold": 2000,
+            "animationDuration": 1000,
+            "animationEasing": "cubicOut",
+            "animationDelay": 0,
+            "animationDurationUpdate": 300,
+            "animationEasingUpdate": "cubicOut",
+            "animationDelayUpdate": 0,
+            "aria": {
+                "enabled": false
+            },
+            "color": [
+                "#5470c6",
+                "#91cc75",
+                "#fac858",
+                "#ee6666",
+                "#73c0de",
+                "#3ba272",
+                "#fc8452",
+                "#9a60b4",
+                "#ea7ccc"
+            ],
+            "series": [
+                {
+                    "type": "funnel",
+                    "data": [
+                        {
+                            "name": "\u78f7\u9178\u94c1\u9502\u7535\u6c60\n 160 Wh/kg",
+                            "value": 8
+                        },
+                        {
+                            "name": "\u4e09\u5143\u805a\u5408\u7269\u9502\u7535\u6c60\n300 Wh/kg",
+                            "value": 10
+                        },
+                        {
+                            "name": "\u954d\u6c22\u7535\u6c60\n120Wh/kg",
+                            "value": 5
+                        },
+                        {
+                            "name": "\u7845\u8d1f\u6781\u9502\u79bb\u5b50\u7535\u6c60\n 450 Wh/kg",
+                            "value": 15
+                        },
+                        {
+                            "name": "\u77f3\u58a8\u70ef\u7535\u6c60\n500 Wh/kg",
+                            "value": 7
+                        },
+                        {
+                            "name": "\u94b4\u9178\u9502\u7535\u6c60\n200 Wh/kg",
+                            "value": 5
+                        }
+                    ],
+                    "sort": "ascending",
+                    "gap": 0,
+                    "label": {
+                        "show": true,
+                        "position": "inside",
+                        "margin": 8
+                    }
+                }
+            ],
+            "legend": [
+                {
+                    "data": [
+                        "\u78f7\u9178\u94c1\u9502\u7535\u6c60\n 160 Wh/kg",
+                        "\u77f3\u58a8\u70ef\u7535\u6c60\n500 Wh/kg",
+                        "\u954d\u6c22\u7535\u6c60\n120Wh/kg",
+                        "\u4e09\u5143\u805a\u5408\u7269\u9502\u7535\u6c60\n300 Wh/kg",
+                        "\u7845\u8d1f\u6781\u9502\u79bb\u5b50\u7535\u6c60\n 450 Wh/kg",
+                        "\u94b4\u9178\u9502\u7535\u6c60\n200 Wh/kg"
+                    ],
+                    "selected": {},
+                    "show": false,
+                    "top": 380,
+                    "padding": 5,
+                    "itemGap": 10,
+                    "itemWidth": 25,
+                    "itemHeight": 14,
+                    "backgroundColor": "transparent",
+                    "borderColor": "#ccc",
+                    "borderWidth": 1,
+                    "borderRadius": 0,
+                    "pageButtonItemGap": 5,
+                    "pageButtonPosition": "end",
+                    "pageFormatter": "{current}/{total}",
+                    "pageIconColor": "#2f4554",
+                    "pageIconInactiveColor": "#aaa",
+                    "pageIconSize": 15,
+                    "animationDurationUpdate": 800,
+                    "selector": false,
+                    "selectorPosition": "auto",
+                    "selectorItemGap": 7,
+                    "selectorButtonGap": 10
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "enterable": false,
+                "confine": false,
+                "appendToBody": false,
+                "transitionDuration": 0.4,
+                "formatter": "{c} 年",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5,
+                "order": "seriesAsc"
+            },
+            "title": [
+                {
+                    "show": true,
+                    "text": "\u4e0d\u540c\u7c7b\u578b\u7535\u6c60\u7684\u4f7f\u7528\u5e74\u9650\u6f0f\u6597\u56fe",
+                    "target": "blank",
+                    "subtext": "\u56fe\u50cf\u5927\u5c0f\u6839\u636e\u80fd\u91cf\u5bc6\u5ea6\u5927\u5c0f\u51b3\u5b9a",
+                    "subtarget": "blank",
+                    "padding": 5,
+                    "itemGap": 10,
+                    "textAlign": "auto",
+                    "textVerticalAlign": "auto",
+                    "triggerEvent": false
+                }
+            ]
+        };
+                chart_90632b87f72b4b6b8d8bdfe00349c346.setOption(option_90632b87f72b4b6b8d8bdfe00349c346);
+            </script>
+
+        <!-- 技术来源 -->
+        <div id="b7222d2ba99d4948a1e2e1fff5aa645c" class="chart-container"
+            style="width:500px; height:400px;position:absolute;top: 500px;right: 0px; "></div>
+        <script>
+            var chart_b7222d2ba99d4948a1e2e1fff5aa645c = echarts.init(
+                document.getElementById('b7222d2ba99d4948a1e2e1fff5aa645c'), 'white', { renderer: 'canvas' });
+            var option_b7222d2ba99d4948a1e2e1fff5aa645c = {
+                "animation": true,
+                "animationThreshold": 2000,
+                "animationDuration": 1000,
+                "animationEasing": "cubicOut",
+                "animationDelay": 0,
+                "animationDurationUpdate": 300,
+                "animationEasingUpdate": "cubicOut",
+                "animationDelayUpdate": 0,
+                "aria": {
+                    "enabled": false
+                },
+                "color": [
+                    "#5470c6",
+                    "#91cc75",
+                    "#fac858",
+                    "#ee6666",
+                    "#73c0de",
+                    "#3ba272",
+                    "#fc8452",
+                    "#9a60b4",
+                    "#ea7ccc"
+                ],
+                "series": [
+                    {
+                        "type": "pie",
+                        "colorBy": "data",
+                        "legendHoverLink": true,
+                        "selectedMode": false,
+                        "selectedOffset": 10,
+                        "clockwise": true,
+                        "startAngle": 90,
+                        "minAngle": 0,
+                        "minShowLabelAngle": 0,
+                        "avoidLabelOverlap": true,
+                        "stillShowZeroSum": true,
+                        "percentPrecision": 2,
+                        "showEmptyCircle": true,
+                        "emptyCircleStyle": {
+                            "color": "lightgray",
+                            "borderColor": "#000",
+                            "borderWidth": 0,
+                            "borderType": "solid",
+                            "borderDashOffset": 0,
+                            "borderCap": "butt",
+                            "borderJoin": "bevel",
+                            "borderMiterLimit": 10,
+                            "opacity": 1
+                        },
+                        "data": [
+                            {
+                                "name": "\u4e2d\u56fd",
+                                "value": 41.2
+                            },
+                            {
+                                "name": "\u65e5\u672c",
+                                "value": 18.56
+                            },
+                            {
+                                "name": "\u7f8e\u56fd",
+                                "value": 15.5
+                            },
+                            {
+                                "name": "\u5fb7\u56fd",
+                                "value": 10.66
+                            },
+                            {
+                                "name": "\u5176\u5b83",
+                                "value": 14.08
+                            }
+                        ],
+                        "radius": [
+                            "75%",
+                            "40%"
+                        ],
+                        "center": [
+                            "50%",
+                            "50%"
+                        ],
+                        "label": {
+                            "show": true,
+                            "margin": 8,
+                            "formatter": "{b}:{d}%"
+                        },
+                        "labelLine": {
+                            "show": true,
+                            "showAbove": false,
+                            "length": 15,
+                            "length2": 15,
+                            "smooth": false,
+                            "minTurnAngle": 90,
+                            "maxSurfaceAngle": 90
+                        },
+                        "rippleEffect": {
+                            "show": true,
+                            "brushType": "stroke",
+                            "scale": 2.5,
+                            "period": 4
+                        }
+                    }
+                ],
+                "legend": [
+                    {
+                        "data": [
+                            "\u4e2d\u56fd",
+                            "\u65e5\u672c",
+                            "\u7f8e\u56fd",
+                            "\u5fb7\u56fd",
+                            "\u5176\u5b83"
+                        ],
+                        'top': '7%',
+                        "selected": {},
+                        "show": true,
+                        "padding": 5,
+                        "itemGap": 10,
+                        "itemWidth": 25,
+                        "itemHeight": 14,
+                        "backgroundColor": "transparent",
+                        "borderColor": "#ccc",
+                        "borderWidth": 1,
+                        "borderRadius": 0,
+                        "pageButtonItemGap": 5,
+                        "pageButtonPosition": "end",
+                        "pageFormatter": "{current}/{total}",
+                        "pageIconColor": "#2f4554",
+                        "pageIconInactiveColor": "#aaa",
+                        "pageIconSize": 15,
+                        "animationDurationUpdate": 800,
+                        "selector": false,
+                        "selectorPosition": "auto",
+                        "selectorItemGap": 7,
+                        "selectorButtonGap": 10
+                    }
+                ],
+                "tooltip": {
+                    "show": true,
+                    "trigger": "item",
+                    "triggerOn": "mousemove|click",
+                    "axisPointer": {
+                        "type": "line"
+                    },
+                    "showContent": true,
+                    "alwaysShowContent": false,
+                    "showDelay": 0,
+                    "hideDelay": 100,
+                    "enterable": false,
+                    "confine": false,
+                    "appendToBody": false,
+                    "transitionDuration": 0.4,
+                    "textStyle": {
+                        "fontSize": 14
+                    },
+                    "borderWidth": 0,
+                    "padding": 5,
+                    "order": "seriesAsc"
+                },
+                "title": [
+                    {
+                        "show": true,
+                        "top": '0%',
+                        "text": "\u65b0\u80fd\u6e90\u6c7d\u8f66\u884c\u4e1a\u6280\u672f\u6765\u6e90\u56fd\u5206\u5e03\u60c5\u51b5",
+                        "target": "blank",
+                        "subtarget": "blank",
+                        "padding": 5,
+                        "itemGap": 10,
+                        "textAlign": "auto",
+                        "textVerticalAlign": "auto",
+                        "triggerEvent": false
+                    }
+                ]
+            };
+            chart_b7222d2ba99d4948a1e2e1fff5aa645c.setOption(option_b7222d2ba99d4948a1e2e1fff5aa645c);
+        </script>
+
+        <!-- 专利 -->
+        <div id="chart" style="width: 800px; height: 450px;position: absolute;top: 500px;left: 600px;"></div>
+
+        <script>
+            var chartDom = document.getElementById('chart');
+            var myChart = echarts.init(chartDom);
+            var option;
+
+            option = {
+                title: {
+                    text: '专利集中度分析'
+                },
+                xAxis: {
+                    type: 'category',
+                    data: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                },
+                yAxis: {
+                    type: 'value',
+                    min: 3 // 设置 y 轴最小值为 3
+                },
+                series: [
+                    {
+                        data: [14.54, 11.05, 10.78, 9.25, 10.14, 8.22, 5.99, 6.05],
+                        type: 'line',
+                        smooth: true,
+                        lineStyle: {
+                            color: 'saddlebrown' // 设置线条颜色为褐红色
+                        },
+                        label: { // 设置标签
+                            show: true, // 显示标签
+                            position: 'top' // 标签位置：上方
+                        }
+                    }
+                ]
+            };
+
+            option && myChart.setOption(option);
+        </script>
+
+    </div>
+    <script>
+        chart_89e29033663545c987bb918a252fdc42.on('click', function (params) {
+            var hiddenDivs = document.querySelectorAll('.text');
+            hiddenDivs.forEach(function (div) {
+                div.style.display = 'none';
+            });
+            var nameToClassMap = {
+                "\u5b81\u5fb7\u65f6\u4ee3": '000',
+                "LG\u65b0\u80fd\u6e90": '111',
+                "\u6bd4\u4e9a\u8fea": '222',
+                "\u677e\u4e0b": '333',
+                "\u4e2d\u521b\u65b0\u822a": '444',
+                "\u4e09\u661f": '555',
+                "SK On": '666',
+                "\u56fd\u8f69\u9ad8\u79d1": '777',
+                "\u4ebf\u7eac\u9502\u80fd": '888',
+                "\u5b5a\u80fd\u79d1\u6280": '999',
+                "\u5176\u5b83": '011'
+            };
+            if (params.componentType === 'series' && nameToClassMap.hasOwnProperty(params.name)) {
+                var targetClass = nameToClassMap[params.name];
+                hiddenDivs.forEach(function (div) {
+                    if (div.classList.contains(targetClass)) {
+                        div.style.display = 'block';
+                    }
+                });
+                if (params.name !== "\u5b81\u5fb7\u65f6\u4ee3") {
+                    var video = document.querySelector('video');
+                    if (video) {
+                        video.pause();
+                    }
+                }
+            }
+        });
+    </script>
+    
+    
+</body>
+
+</html>

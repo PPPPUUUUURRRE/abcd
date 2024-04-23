@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 1920px;
+    background-image: url(../image/背景.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div.title{
+    height: 120px;
+    font-size:90px ;
+    font-family: "Gill Sans", sans-serif;
+}
+
+
+div.change{
+    height: 300px;
+    margin: 50px 160px;
+    display: flex;
+    justify-content: space-around;
+}
+div.one{
+    height: 300px;
+    width: 300px;
+    background-image: url(../image/小闪电.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div.two{
+    height: 300px;
+    width: 300px;
+    background-image: url(../image/小汽车\(1\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div.three{
+    height: 300px;
+    width: 300px;
+    background-image: url(../image/小闪电.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div.four{
+    height: 300px;
+    width: 300px;
+    background-image: url(../image/小汽车\(1\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div.change div{
+    transition: transform 2s ease;
+}
+div div.one:hover {
+    transform: scaleX(1);
+    background-image: url(../image/行业发展.png);
+  }
+  div div.two:hover {
+    transform: scaleX(1);
+    background-image: url(../image/用户消费.png);
+  }
+  div div.three:hover {
+    transform: scaleX(1);
+    background-image: url(../image/技术创新.png);
+  }
+  div div.four:hover {
+    transform: scaleX(1);
+    background-image: url(../image/未来发展.png);
+  }
+  @font-face {
+    font-family: "CustomFont";
+    src: url("../SanJiBangKaiJianTi-2.ttf") format("truetype");
+}
+
+div.title {
+    font-family: "CustomFont", Arial, sans-serif;
+}
+div.aaa{
+    font-family: "CustomFont", Arial, sans-serif;
+}
